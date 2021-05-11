@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kimai-deployment
+  labels:
+    app: kimai
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kimai
+  template:
+    metadata:
+      labels:
+        app: kimai
+    spec:
+      containers:
+      - name: kimai
+        image: kimai/kimai2:apache
+        ports:
+        - containerPort: 8001
+        env:
+        - name: ADMINMAIL
+          valueFrom:
+            secretKeyRef:
+              name: kimai-app-secret
+              key: ADMINMAIL    
+        - name: ADMINPASS
+          valueFrom:
+            secretKeyRef:
+              name: kimai-app-secret
+              key: ADMINPASS      
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: kimai-app-secret
+              key: DATABASE_URL      
+        - name: TRUSTED_HOSTS
+          valueFrom:
+            configMapKeyRef:
+              name: kimai-app-configmap
+              key: TRUSTED_HOSTS      
