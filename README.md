@@ -24,6 +24,7 @@ o	Kimai App Containers will run on Kubernetes and Database is running on AWS RDS
  ![image](https://user-images.githubusercontent.com/25103050/117771202-7c28a400-b253-11eb-8752-826bf2f7fc0b.png)
 
 •	Kimai App Containers requires some input parameters as environment variables i.e. ADMINMAIL, ADMINPASS, DATABASE_URL and TRUSTED_HOSTS. For the same, Please create configmap and secret object to store these environment variables values. Which can be used in deployments.yaml file for the KIMAI APP Deployment.
+
  ![image](https://user-images.githubusercontent.com/25103050/117771213-7fbc2b00-b253-11eb-8de6-8ca790a3f1d0.png)
 
 •	To deploy the application on kubernetes cluster fire below command which will create deployment and expose these deployment using service.
@@ -32,6 +33,7 @@ o	Kimai App Containers will run on Kubernetes and Database is running on AWS RDS
 
 •	Below command is used to see logs inside kimai-app pods:
 o	Kubectl logs deployment/kimai-deployment
+
  ![image](https://user-images.githubusercontent.com/25103050/117771246-864aa280-b253-11eb-9bd9-755ba0d03763.png)
 
 •	Kimai-app pods are expose using nodeport service so below command will give us a nodeport.
