@@ -4,11 +4,17 @@
 **•	Kubernetes Cluster setup info: **
 
 o	kubeadm 1.21
+
 o	1 Control Plane Node (Master)
+
 o	1 Worker Node
+
 o	OS: Ubuntu 18.04
+
 o	AWS EC2 instance type: t3.medium
+
 o	Kimai App Containers will run on Kubernetes and Database is running on AWS RDS.
+
  ![image](https://user-images.githubusercontent.com/25103050/117771158-6fa44b80-b253-11eb-8b6d-bf8b0a020d63.png)
 
 •	Below are Kubernetes manifest files to deploy “KIMAI App” on kubernetes cluster.
