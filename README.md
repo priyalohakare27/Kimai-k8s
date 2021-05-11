@@ -1,6 +1,8 @@
 # Kimai-k8s
 **KIMAI App Deployment on Kubernetes**
+
 **•	Kubernetes Cluster setup info: **
+
 o	kubeadm 1.21
 o	1 Control Plane Node (Master)
 o	1 Worker Node
