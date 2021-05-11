@@ -48,10 +48,15 @@ o	Kubectl logs deployment/kimai-deployment
 
 •	**Areas of optimization:**
 o	We can use AWS ECS service to host this application which is cost-effective solution since AWS Provides ECS Master free of cost.
+
 o	We can use AWS EKS for the kubernetes cluster deployment.
+
 o	We can use Terraform to provision the infrastructure.
+
 o	If we are using AWS EKS, we can use AWS ALB as ingress-controller and application pods will be exposed using ingress and ingress-controller (AWS ALB).
+
 o	Since “KIMAI-APP” is PHP application, if it requires continuous read/write operation on file system, we can use AWS EFS and mount Application file system on AWS EFS using Persistent-Volumes and Persistent-Volume-claims.
+
 o	We can also use helm-charts for the deployment
 
 
